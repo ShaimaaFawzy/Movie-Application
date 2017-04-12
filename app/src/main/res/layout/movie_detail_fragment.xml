@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:textSize="30sp" android:background="#009688" android:textColor="#FFFFFF"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/imageView_cover"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/cover"
+            android:layout_below="@id/textView_title"
+            />
+
+        <TextView
+            android:id="@+id/textView_release"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/imageView_cover"
+            android:layout_below="@id/textView_title"
+            android:layout_margin="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textView_vote"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/imageView_cover"
+            android:layout_below="@id/textView_release"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/holo_red_light"
+            tools:targetApi="ice_cream_sandwich" />
+<Button
+    android:id="@+id/favButton"
+    android:layout_width="150dp"
+    android:layout_height="match_parent"
+    android:layout_below="@id/textView_vote"
+    android:layout_toRightOf="@id/imageView_cover"
+    android:text="Add To Favourite"
+    android:textSize="10dp"/>
+        <TextView
+            android:id="@+id/detail_overview"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:layout_below="@id/imageView_cover"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            />
+
+
+        <TextView
+            android:id="@+id/trailers_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trailers"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_below="@id/detail_overview"
+            />
+        <HorizontalScrollView
+            android:id="@+id/trailer_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/trailers_header"
+            >
+            <ListView
+                android:id="@+id/detail_trailers_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
+                android:headerDividersEnabled="false"
+                android:textFilterEnabled="false"
+                 />
+        </HorizontalScrollView>
+        <TextView
+            android:id="@+id/views_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reviews"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_below="@id/trailer_scroll"
+            />
+
+        <ListView
+            android:id="@+id/detail_reviews_list"
+            android:layout_width="wrap_content"
+            android:layout_height="3000dp"
+            android:scrollbars="horizontal"
+            android:layout_below="@id/views_header"
+           />
+
+    </RelativeLayout>
+
+</LinearLayout>
+</ScrollView>
